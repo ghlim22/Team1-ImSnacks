@@ -2,7 +2,7 @@ name: backend-ci.yml
 
 on:
   push:
-    branches: [ "be" ]
+    branches: [ "feat/be-18-test" ]
 
 permissions: write-all
 
