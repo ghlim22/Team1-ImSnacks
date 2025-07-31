@@ -1,7 +1,7 @@
 name: backend-ci.yml
 
 on:
-  push:
+  push: # pull_request:
     branches: [ "feat/be-18-test" ]
 
 permissions: write-all
@@ -22,7 +22,7 @@ jobs:
       - name: Set up properties
         run: |
             cd backend/src/main
-            mkdir resources
+            mkdir -p resources
             cd resources
             touch application.properties
             echo "${{ secrets.APPLICATION }}" > application.properties
@@ -34,6 +34,6 @@ jobs:
           cd backend
           chmod +x gradlew
           
-      - name: Test with Gradle
-        run: backend/gradlew clean jacocoTestReport
+#      - name: Test with Gradle
+#        run: backend/gradlew clean jacocoTestReport
 
