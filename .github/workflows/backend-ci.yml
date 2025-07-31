@@ -1,7 +1,7 @@
 name: backend-ci.yml
 
 on:
-  pull_request:
+  push:
     branches: [ "be" ]
 
 permissions: write-all
