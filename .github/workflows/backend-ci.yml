@@ -2,7 +2,7 @@ name: backend-ci.yml
 
 on:
   push: # pull_request:
-    branches: [ "feat/be-18-test" ]
+    branches: [ "feat/be-18-test" ] # 브랜치 이름 변경
 
 permissions: write-all
 
@@ -37,3 +37,12 @@ jobs:
 #      - name: Test with Gradle
 #        run: backend/gradlew clean jacocoTestReport
 
+#    - name: Add coverage to PR
+#        id: jacoco
+#        uses: madrapps/jacoco-report@v1.2
+#        with:
+#          paths: ${{ github.workspace }}/build/jacoco/index.xml
+#          token: ${{ secrets.GITHUB_TOKEN }}
+#          title: "테스트 커버리지 측정"
+#          min-coverage-overall: 40
+#          min-coverage-changed-files: 40
