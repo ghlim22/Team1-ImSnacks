@@ -1,4 +1,4 @@
-package dto;
+package com.ImSnacks.NyeoreumnagiBatch.reader.dto;
 
 import lombok.Getter;
 import lombok.Setter;
